@@ -1,9 +1,9 @@
-import { Link } from "react-router-dom"
-export default function Solucao(){
-    <Link to = '/solucao/' ></Link>
-    return(
-        <>
-        <h1>Solucao</h1>
-        </>
-    )
+import React from "react";
+
+export default function Solucao() {
+  return (
+    <>
+      <h1>Solucao</h1>
+    </>
+  );
 }
