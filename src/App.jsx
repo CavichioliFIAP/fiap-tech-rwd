@@ -35,7 +35,7 @@ function App() {
         <Route path="/integrantes" element={<Integrantes />} />
         <Route path="*" element={<Erro404 />} />
       </Routes>
-    <Rodape /> {/* Renderize o footer em todas as páginas */ }
+      <Rodape /> {/* Renderize o footer em todas as páginas */ }
     </Router>
   );
 }
