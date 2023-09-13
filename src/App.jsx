@@ -1,14 +1,18 @@
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import { createRoot } from 'react-dom/client'; // Importe createRoot corretamente
+import Cabecalho from './components/Header';
+import Home from './components/Home';
+import Problema from './routes/Problema';
+import Solucao from './routes/Solucao';
+import Integrantes from './routes/Integrantes';
+import Erro404 from './routes/Erro404';
 
-import React from "react"
-import Rodape from "./components/Rodape"
-import Home from "./components/Home"
-//import ConteudoLista from "./components/ConteudoLista"
-
-function App() {
+export default function App() {
   return (
     <Router>
       <Cabecalho /> {/* Renderize o cabeçalho em todas as páginas */}
-      {/* <div>
+      <div>
         <ul>
           <li>
             <Link to="/">Home</Link>
@@ -23,7 +27,8 @@ function App() {
             <Link to="/integrantes">Integrantes</Link>
           </li>
         </ul>
-      </div> */}
+      </div>
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/problema" element={<Problema />} />
@@ -31,10 +36,11 @@ function App() {
         <Route path="/integrantes" element={<Integrantes />} />
         <Route path="*" element={<Erro404 />} />
       </Routes>
-      <Rodape /> {/* Renderize o footer em todas as páginas */ }
     </Router>
   );
 }
 
-export default App;
+const root = createRoot(document.getElementById('root')); // Crie a raiz usando createRoot
+root.render(<App />); // Renderize o aplicativo na raiz
 
+export default App;

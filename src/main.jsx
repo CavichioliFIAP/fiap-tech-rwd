@@ -1,14 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { createBrowserRouter, RouterProvider, Link, Outlet, Route } from 'react-router-dom';
 import './App.css';
 
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import Integrantes from './routes/Integrantes.jsx'
-import Problema from './routes/Problema.jsx'
-import Solucao from './routes/Solucao.jsx'
-import Home from './routes/Home.jsx'
-import Erro404 from './routes/Erro404.jsx'
-
+import App from './App.jsx';
+import Integrantes from './routes/Integrantes.jsx';
+import Problema from './routes/Problema.jsx';
+import Solucao from './routes/Solucao.jsx';
+import Erro404 from './routes/Erro404.jsx';
 
 const router = createBrowserRouter([
   {path: '/' , 
@@ -30,6 +29,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router}>
+      <Outlet /> {/* Renderiza o componente correspondente à rota atual */}
+    </RouterProvider>
   </React.StrictMode>
 );
