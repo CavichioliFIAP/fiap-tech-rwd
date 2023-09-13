@@ -1,12 +1,8 @@
-import React from "react";
-import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
-import Cabecalho from "./components/Header";
-import Home from "./components/Home";
-import Problema from "./routes/Problema";
-import Solucao from "./routes/Solucao";
-import Integrantes from "./routes/Integrantes";
-import Erro404 from "./routes/Erro404";
-import Rodape from "./components/Rodape";
+
+import React from "react"
+import Rodape from "./components/Rodape"
+import Home from "./components/Home"
+//import ConteudoLista from "./components/ConteudoLista"
 
 function App() {
   return (
