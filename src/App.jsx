@@ -43,4 +43,3 @@ export default function App() {
 const root = createRoot(document.getElementById('root')); // Crie a raiz usando createRoot
 root.render(<App />); // Renderize o aplicativo na raiz
 
-export default App;
