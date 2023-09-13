@@ -1,14 +1,15 @@
+// eslint-disable-next-line no-unused-vars
 import React from "react";
 import { Link } from "react-router-dom"; // Importe o Link do React Router
 
-export default function Cabecalho(props) {
+export default function Cabecalho() {
   return (
     <header>
       <div className="logo"></div>
       <nav>
         <ul>
           <li>
-            <img src="./public/logo-porto2.png" alt="" width={100} height={140} />
+            <img src="./logo-porto2.png" alt="" width={100} height={140} />
           </li>
           <input type="text" placeholder="  Pesquisar" />
           <button type="submit">🔍</button>
